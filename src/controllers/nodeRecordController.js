@@ -12,7 +12,7 @@ exports.getNodeRecords = async (req, res) => {
       const filteredNodeRecord = {
         numberOfNodes: nodeRecord.numberOfNodes,
         newNodes: nodeRecord.new,
-        date: nodeRecord.date
+        date: nodeRecord.date.toUTCString()
       }
       filteredNodeRecords.push(filteredNodeRecord)
     })
